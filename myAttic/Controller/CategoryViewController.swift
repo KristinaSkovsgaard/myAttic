@@ -17,6 +17,7 @@ class CategoryViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        loadCategories()
     }
 
     // MARK: - Table view data source
@@ -37,6 +38,19 @@ class CategoryViewController: UITableViewController {
         return cell
     }
     
+    //MARK: - Table view deletage
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToAtticItems", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! AtticItemsViewController
+        
+        if let indexPath = tableView.indexPathForSelectedRow{
+            destinationVC.selectedCategory = categoriesArray[indexPath.row]
+        }
+    }
 
     //MARK: - Add item Button
     

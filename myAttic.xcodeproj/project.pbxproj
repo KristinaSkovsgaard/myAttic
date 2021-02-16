@@ -9,25 +9,25 @@
 /* Begin PBXBuildFile section */
 		0C7A83A225DBDFD7002546A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7A83A125DBDFD7002546A7 /* AppDelegate.swift */; };
 		0C7A83A425DBDFD7002546A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7A83A325DBDFD7002546A7 /* SceneDelegate.swift */; };
-		0C7A83A625DBDFD7002546A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7A83A525DBDFD7002546A7 /* ViewController.swift */; };
 		0C7A83A925DBDFD7002546A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7A83A725DBDFD7002546A7 /* Main.storyboard */; };
 		0C7A83AC25DBDFD7002546A7 /* myAttic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C7A83AA25DBDFD7002546A7 /* myAttic.xcdatamodeld */; };
 		0C7A83AE25DBDFDB002546A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C7A83AD25DBDFDB002546A7 /* Assets.xcassets */; };
 		0C7A83B125DBDFDB002546A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7A83AF25DBDFDB002546A7 /* LaunchScreen.storyboard */; };
 		0C7A83BB25DBE404002546A7 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7A83BA25DBE404002546A7 /* CategoryViewController.swift */; };
+		0C7A83C425DBEA2F002546A7 /* AtticItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7A83C325DBEA2F002546A7 /* AtticItemsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0C7A839E25DBDFD7002546A7 /* myAttic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myAttic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C7A83A125DBDFD7002546A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C7A83A325DBDFD7002546A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0C7A83A525DBDFD7002546A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0C7A83A825DBDFD7002546A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C7A83AB25DBDFD7002546A7 /* myAttic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = myAttic.xcdatamodel; sourceTree = "<group>"; };
 		0C7A83AD25DBDFDB002546A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C7A83B025DBDFDB002546A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C7A83B225DBDFDB002546A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C7A83BA25DBE404002546A7 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		0C7A83C325DBEA2F002546A7 /* AtticItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtticItemsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				0C7A83BA25DBE404002546A7 /* CategoryViewController.swift */,
-				0C7A83A525DBDFD7002546A7 /* ViewController.swift */,
+				0C7A83C325DBEA2F002546A7 /* AtticItemsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -176,8 +176,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C7A83BB25DBE404002546A7 /* CategoryViewController.swift in Sources */,
-				0C7A83A625DBDFD7002546A7 /* ViewController.swift in Sources */,
 				0C7A83A225DBDFD7002546A7 /* AppDelegate.swift in Sources */,
+				0C7A83C425DBEA2F002546A7 /* AtticItemsViewController.swift in Sources */,
 				0C7A83A425DBDFD7002546A7 /* SceneDelegate.swift in Sources */,
 				0C7A83AC25DBDFD7002546A7 /* myAttic.xcdatamodeld in Sources */,
 			);

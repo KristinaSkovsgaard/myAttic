@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--myAttic-->
+        <!--Categories-->
         <scene sceneID="3ie-BX-WcS">
             <objects>
                 <tableViewController id="X6x-u1-vJ1" customClass="CategoryViewController" customModule="myAttic" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,29 +30,40 @@
                             <outlet property="delegate" destination="X6x-u1-vJ1" id="CAE-98-O0U"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="myAttic" id="Yg7-Kw-H4h">
+                    <navigationItem key="navigationItem" title="Categories" id="Yg7-Kw-H4h">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Oq5-KN-1yo">
                             <connections>
                                 <action selector="addCategoryPressed:" destination="X6x-u1-vJ1" id="ubb-wc-2ct"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="5WY-ga-OzD" kind="show" identifier="goToAtticItems" id="UVl-wQ-tmX"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F8C-YR-A7o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1948" y="72"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Attic items-->
         <scene sceneID="let-Zu-USa">
             <objects>
-                <tableViewController id="5WY-ga-OzD" sceneMemberID="viewController">
+                <tableViewController id="5WY-ga-OzD" customClass="AtticItemsViewController" customModule="myAttic" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="h3i-NY-GqX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="lXf-kk-GUx">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="5WY-ga-OzD" id="5Vf-a2-NTm"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="RPH-Si-NeE">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="atticItemCell" id="RPH-Si-NeE">
+                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RPH-Si-NeE" id="JJo-3C-b9l">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -65,6 +76,13 @@
                             <outlet property="delegate" destination="5WY-ga-OzD" id="7kr-y5-gjP"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Attic items" id="ihx-wl-S7T">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="itF-CZ-NB9">
+                            <connections>
+                                <action selector="addItemsPressed:" destination="5WY-ga-OzD" id="6tX-BT-V6N"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAb-PP-a8T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
