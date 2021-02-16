@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H15" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AtticItem" representedClassName="AtticItem" syncable="YES" codeGenerationType="class">
+        <attribute name="title" attributeType="String"/>
+        <relationship name="parentCategory" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="atticItems" inverseEntity="Category"/>
+    </entity>
+    <entity name="Category" representedClassName="Category" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <relationship name="atticItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AtticItem" inverseName="parentCategory" inverseEntity="AtticItem"/>
+    </entity>
+    <elements>
+        <element name="Category" positionX="-43.46484375" positionY="-257.74609375" width="128" height="73"/>
+        <element name="AtticItem" positionX="-39.375" positionY="-67.64453125" width="128" height="73"/>
+    </elements>
+</model>

@@ -10,13 +10,13 @@
         <!--myAttic-->
         <scene sceneID="3ie-BX-WcS">
             <objects>
-                <tableViewController id="X6x-u1-vJ1" sceneMemberID="viewController">
+                <tableViewController id="X6x-u1-vJ1" customClass="CategoryViewController" customModule="myAttic" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="x91-Pf-8qH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="gx0-Y5-ID5">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCell" id="gx0-Y5-ID5">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gx0-Y5-ID5" id="loW-KX-z7E">
@@ -30,11 +30,45 @@
                             <outlet property="delegate" destination="X6x-u1-vJ1" id="CAE-98-O0U"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="myAttic" id="Yg7-Kw-H4h"/>
+                    <navigationItem key="navigationItem" title="myAttic" id="Yg7-Kw-H4h">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Oq5-KN-1yo">
+                            <connections>
+                                <action selector="addCategoryPressed:" destination="X6x-u1-vJ1" id="ubb-wc-2ct"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F8C-YR-A7o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1948" y="72"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="let-Zu-USa">
+            <objects>
+                <tableViewController id="5WY-ga-OzD" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="h3i-NY-GqX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="RPH-Si-NeE">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RPH-Si-NeE" id="JJo-3C-b9l">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5WY-ga-OzD" id="LUE-CH-weV"/>
+                            <outlet property="delegate" destination="5WY-ga-OzD" id="7kr-y5-gjP"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eAb-PP-a8T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2639" y="72"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dYc-HG-2WD">
@@ -47,7 +81,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="X6x-u1-vJ1" kind="relationship" relationship="rootViewController" id="a8d-00-504"/>
+                        <segue destination="X6x-u1-vJ1" kind="relationship" relationship="rootViewController" id="RKt-DA-nLg"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GxS-xI-BBS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
